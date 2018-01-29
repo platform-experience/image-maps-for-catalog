@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_pisn_imagemap_map">
+    <x_pisn_imagemap_map action="INSERT_OR_UPDATE">
+        <area_border_color>rgba(0,0,0,0.3)</area_border_color>
+        <area_border_color_hover>rgba(0,0,0,0.4)</area_border_color_hover>
+        <area_fill_color>rgba(200,0,0,0.3)</area_fill_color>
+        <area_fill_color_hover>rgba(200,0,0,0.4)</area_fill_color_hover>
+        <choice_variable display_value="Which part of your body is most injured?">62640ecedb3303008cfb70f08c96195f</choice_variable>
+        <image display_value="body-outline.jpg">e5c752cadb7303008cfb70f08c961980</image>
+        <macro_variable display_value="Which part of your body is most injured?">b485ca02db7303008cfb70f08c9619e1</macro_variable>
+        <mode>choice</mode>
+        <sys_class_name>x_pisn_imagemap_map</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-23 04:28:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8da91a0edb7303008cfb70f08c96195e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>b485ca02db7303008cfb70f08c9619e1</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>x_pisn_imagemap_map_8da91a0edb7303008cfb70f08c96195e</sys_update_name>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-28 10:04:48</sys_updated_on>
+    </x_pisn_imagemap_map>
+</record_update>

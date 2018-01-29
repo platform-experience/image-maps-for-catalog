@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="INSERT_OR_UPDATE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_pisn_imagemap_area</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-23 04:26:16</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>58f451984fc0130022f40ccf0310c710</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_pisn_imagemap_area</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>ua_table_licensing_config_58f451984fc0130022f40ccf0310c710</sys_update_name>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-23 04:26:16</sys_updated_on>
+    </ua_table_licensing_config>
+</record_update>

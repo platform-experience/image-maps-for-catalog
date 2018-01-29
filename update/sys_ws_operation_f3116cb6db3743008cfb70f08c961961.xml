@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>MapForMacroID</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var id = request.pathParams.id;
+	
+	var imh = new ImageMapHelper();
+	var map = imh.getMapForMacroVar(id);
+	
+	var res = {
+		image: map.getImageURL(),
+		mode: map.getMode(),
+		areas: map.getAreasAsJSON(),
+		colors: map.getColors()
+	};
+	
+	if (res.mode === 'choice') {
+		res.vbl = map.getChoiceVblName();
+	}
+	
+	return res;
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_pisn_imagemap/image_map/map/macro/{id}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/map/macro/{id}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-25 03:40:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f3116cb6db3743008cfb70f08c961961</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>MapForMacroID</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>sys_ws_operation_f3116cb6db3743008cfb70f08c961961</sys_update_name>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-28 09:58:07</sys_updated_on>
+        <web_service_definition display_value="Image Map">87012cb6db3743008cfb70f08c961959</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

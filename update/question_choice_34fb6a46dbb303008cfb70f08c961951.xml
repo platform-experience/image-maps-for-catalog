@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <misc>0</misc>
+        <order>100</order>
+        <question display_value="Which part of your body is most injured?">62640ecedb3303008cfb70f08c96195f</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-23 05:53:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>34fb6a46dbb303008cfb70f08c961951</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Head</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>question_choice_34fb6a46dbb303008cfb70f08c961951</sys_update_name>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-23 05:53:20</sys_updated_on>
+        <text>Head</text>
+        <value>head</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=34fb6a46dbb303008cfb70f08c961951"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>misc</field>
+        <id>34fb6a46dbb303008cfb70f08c961951</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-23 05:53:20</sys_created_on>
+        <sys_id>bc1da286dbb303008cfb70f08c961982</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-23 05:53:20</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_misc</field>
+        <id>34fb6a46dbb303008cfb70f08c961951</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-23 05:53:20</sys_created_on>
+        <sys_id>f81da286dbb303008cfb70f08c961981</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-23 05:53:20</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

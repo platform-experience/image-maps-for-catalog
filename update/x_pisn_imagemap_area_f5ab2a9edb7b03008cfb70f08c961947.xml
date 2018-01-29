@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_pisn_imagemap_area">
+    <x_pisn_imagemap_area action="INSERT_OR_UPDATE">
+        <checkbox/>
+        <coordinates>346,553,347,579,352,596,359,606,363,636,372,637,374,631,382,639,390,636,398,643,405,634,411,633,414,600,406,572,428,570,433,559,380,536</coordinates>
+        <map display_value="Which part of your body is most injured?">8da91a0edb7303008cfb70f08c96195e</map>
+        <mode>choice</mode>
+        <option display_value="Left Hand">de3da286dbb303008cfb70f08c961992</option>
+        <shape>poly</shape>
+        <sys_class_name>x_pisn_imagemap_area</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-24 00:25:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f5ab2a9edb7b03008cfb70f08c961947</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>poly</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>x_pisn_imagemap_area_f5ab2a9edb7b03008cfb70f08c961947</sys_update_name>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-24 00:25:35</sys_updated_on>
+    </x_pisn_imagemap_area>
+</record_update>

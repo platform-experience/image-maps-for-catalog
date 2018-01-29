@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function(spUtil, $scope, $document, Fabricjs, ImageMap, $element) {
+	
+	var c = this;
+	
+	var g_form,
+			elem,
+			cvs;
+	
+	c.load = function (vbl_id) {
+		c.data.vbl_id = vbl_id;
+		c.server.update().then(init);
+	};
+	
+	function init() {
+		g_form = $scope.page.g_form;
+		elem = $element.find('#pi-im-map-' + c.data.vbl_id);
+		cvs = new Canvas(elem, c.data, g_form);
+	}
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.pi-im {
+  
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-top: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  
+  .pi-im-note {
+    border-radius: 10px 10px 0 0;
+    background-color: #fafafa;
+    padding: 10px;
+  }
+  
+  .pi-im-debug {
+    border: 1px solid #ccc;
+  }
+  
+  .pi-im-canvas {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .canvas-container {
+    margin: 0px auto;
+  }
+  
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>pi-image-map</id>
+        <internal>false</internal>
+        <link><![CDATA[function (scope, elem, attrs) {
+	
+	var $timeout = $injector.get('$timeout');
+	var $document = $injector.get('$document');
+	
+	$timeout(function () {
+		var vbl_id = elem.closest('div[id]').attr('id');
+		scope.c.load(vbl_id);
+	}, 0);
+	
+	scope.hideEmptyOptions = function () {
+		var fieldsets = $document.find('fieldset');
+	}
+	
+}]]></link>
+        <name>(PI) Image Map for Catalog Items</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	
+	if (input && input.vbl_id) {
+		
+		data.vbl_id = input.vbl_id;
+		
+		var imh = new ImageMapHelper();
+		var map = imh.getMapForMacroVar(data.vbl_id);
+		
+		if (map) {
+			
+			data.image = map.getImageURL();
+			data.mode = map.getMode();
+			
+			if (data.mode === 'choice') {
+				data.vbl = map.getChoiceVblName();
+			}
+			
+			data.areas = map.getAreasAsJSON();
+			data.colors = map.getColors();
+		}
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-23 02:19:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>863c7d4adb3303008cfb70f08c961924</sys_id>
+        <sys_mod_count>204</sys_mod_count>
+        <sys_name>(PI) Image Map for Catalog Items</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>sp_widget_863c7d4adb3303008cfb70f08c961924</sys_update_name>
+        <sys_updated_by>dylan.lindgren@snc</sys_updated_by>
+        <sys_updated_on>2018-01-29 21:54:13</sys_updated_on>
+        <template><![CDATA[<div class="pi-im">
+  <div class="pi-im-note">
+  	<span ng-if="c.data.mode === 'choice'">Please select <strong>one</strong> area on the below image.</span>
+    <span ng-if="c.data.mode === 'checkbox'">You may select <strong>multiple</strong> areas on the below image.</span>
+  </div>
+  <div class="pi-im-canvas">
+    <canvas id="pi-im-map-{{::c.data.vbl_id}}"></canvas>
+  </div>
+  
+</div>]]></template>
+    </sp_widget>
+</record_update>

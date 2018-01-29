@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_js_include">
+    <sp_js_include action="INSERT_OR_UPDATE">
+        <display_name>Canvas</display_name>
+        <source>local</source>
+        <sys_class_name>sp_js_include</sys_class_name>
+        <sys_created_by>dylan.lindgren@snc</sys_created_by>
+        <sys_created_on>2018-01-29 21:43:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e9fff090db4017008cfb70f08c961959</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Canvas</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_ui_script display_value="x_pisn_imagemap.Canvas">e933e32bdbff83008cfb70f08c96195d</sys_ui_script>
+        <sys_update_name>sp_js_include_e9fff090db4017008cfb70f08c961959</sys_update_name>
+        <sys_updated_by>dylan.lindgren@snc</sys_updated_by>
+        <sys_updated_on>2018-01-29 21:43:08</sys_updated_on>
+        <url/>
+    </sp_js_include>
+</record_update>

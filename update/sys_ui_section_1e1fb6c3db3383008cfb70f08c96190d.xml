@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Behaviour" section_id="1e1fb6c3db3383008cfb70f08c96190d" sys_domain="global" table="x_pisn_imagemap_map" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>mode</element>
+            <position>0</position>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2018-01-26 09:45:59</sys_created_on>
+            <sys_id>9e1f3ac3db3383008cfb70f08c96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Behaviour" display_value="Behaviour" name="x_pisn_imagemap_map" sys_domain="global" view="Default view">1e1fb6c3db3383008cfb70f08c96190d</sys_ui_section>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2018-01-26 09:45:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2018-01-26 09:45:59</sys_created_on>
+            <sys_id>121f3ac3db3383008cfb70f08c961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Behaviour" display_value="Behaviour" name="x_pisn_imagemap_map" sys_domain="global" view="Default view">1e1fb6c3db3383008cfb70f08c96190d</sys_ui_section>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2018-01-26 09:45:59</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>choice_variable</element>
+            <position>2</position>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2018-01-26 09:45:59</sys_created_on>
+            <sys_id>921f3ac3db3383008cfb70f08c961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Behaviour" display_value="Behaviour" name="x_pisn_imagemap_map" sys_domain="global" view="Default view">1e1fb6c3db3383008cfb70f08c96190d</sys_ui_section>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2018-01-26 09:45:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Behaviour</caption>
+            <header>false</header>
+            <name>x_pisn_imagemap_map</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2018-01-26 09:45:59</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1e1fb6c3db3383008cfb70f08c96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Behaviour</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+            <sys_update_name>sys_ui_section_1e1fb6c3db3383008cfb70f08c96190d</sys_update_name>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2018-01-26 09:45:59</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

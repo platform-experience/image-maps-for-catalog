@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="option" label="Option" language="en" table="x_pisn_imagemap_area">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>option</element>
+            <help/>
+            <hint/>
+            <label>Option</label>
+            <language>en</language>
+            <name>x_pisn_imagemap_area</name>
+            <plural>Options</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2018-01-23 06:44:32</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>0bc87a0edbb303008cfb70f08c96198b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Option</sys_name>
+            <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+            <sys_update_name>sys_documentation_x_pisn_imagemap_area_option_en</sys_update_name>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2018-01-23 06:44:32</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

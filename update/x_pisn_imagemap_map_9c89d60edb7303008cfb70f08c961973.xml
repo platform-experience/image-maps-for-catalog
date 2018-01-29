@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_pisn_imagemap_map">
+    <x_pisn_imagemap_map action="INSERT_OR_UPDATE">
+        <area_border_color>rgba(0,0,0,0.3)</area_border_color>
+        <area_border_color_hover>rgba(0,0,0,0.4)</area_border_color_hover>
+        <area_fill_color>rgba(200,0,0,0.3)</area_fill_color>
+        <area_fill_color_hover>rgba(200,0,0,0.4)</area_fill_color_hover>
+        <choice_variable/>
+        <image display_value="body-outline.jpg">e5c752cadb7303008cfb70f08c961980</image>
+        <macro_variable display_value="Select the areas of your body that are injured">c6b5ce02db7303008cfb70f08c9619d5</macro_variable>
+        <mode>checkbox</mode>
+        <sys_class_name>x_pisn_imagemap_map</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-23 04:28:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9c89d60edb7303008cfb70f08c961973</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>c6b5ce02db7303008cfb70f08c9619d5</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>x_pisn_imagemap_map_9c89d60edb7303008cfb70f08c961973</sys_update_name>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-28 10:04:02</sys_updated_on>
+    </x_pisn_imagemap_map>
+</record_update>

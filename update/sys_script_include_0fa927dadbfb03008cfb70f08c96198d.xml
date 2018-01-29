@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_pisn_imagemap.Map</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Map</name>
+        <script><![CDATA[var Map = Class.create();
+Map.prototype = {
+    initialize: function(map) {
+		
+		var record;
+		
+		if (typeof map === 'string') {
+			
+			var gr = new GlideRecord('x_pisn_imagemap_map');
+			
+			if (!gr.get(map)) {
+				return false;
+			}
+			
+			record = gr;
+			
+		} else if (typeof map === 'object') {
+			
+			record = map;
+			
+		} else {
+			
+			return false;
+			
+		}
+		
+		Object.defineProperty(this, '_gr', { value: record, enumerable: false });
+
+    },
+	
+	getImageURL: function () {
+		return '/' + this._gr.getDisplayValue('image');
+	},
+	
+	getMode: function () {
+		return this._gr.getValue('mode');
+	},
+	
+	getChoiceVblName: function () {
+		if (this.getMode() === 'choice') {
+			var vbl = this._gr.choice_variable.getRefRecord();
+			return vbl.getValue('name');
+		}
+		
+		return false;
+	},
+	
+	getColors: function () {
+		
+		return {
+			fill: this._gr.getValue('area_fill_color'),
+			fill_hover: this._gr.getValue('area_fill_color_hover'),
+			stroke: this._gr.getValue('area_border_color'),
+			stroke_hover: this._gr.getValue('area_border_color_hover')
+		};
+		
+	},
+	
+	getAreas: function () {
+		
+		var areasGr = new GlideRecord('x_pisn_imagemap_area');
+		areasGr.addQuery('map', this._gr.getUniqueValue());
+		areasGr.query();
+		
+		var areas = [];
+		
+		while (areasGr.next()) {
+			areas.push(new Area(areasGr));
+		}
+		
+		return areas;
+	},
+	
+	getAreasAsJSON: function () {
+		
+		var areasGr = new GlideRecord('x_pisn_imagemap_area');
+		areasGr.addQuery('map', this._gr.getUniqueValue());
+		areasGr.query();
+		
+		var areas = [];
+		
+		while (areasGr.next()) {
+			
+			var area = new Area(areasGr);
+			
+			areas.push(area.toJSON());
+		}
+		
+		return areas;
+	},
+
+    type: 'Map'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-24 04:56:41</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0fa927dadbfb03008cfb70f08c96198d</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Map</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>sys_script_include_0fa927dadbfb03008cfb70f08c96198d</sys_update_name>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-28 09:57:48</sys_updated_on>
+    </sys_script_include>
+</record_update>

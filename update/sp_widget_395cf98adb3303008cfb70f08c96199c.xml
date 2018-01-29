@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function imageMapConfigCtrl (spUtil) {
+  var c = this;
+	
+	console.log(c.data);
+	
+	c.$onInit = function () {
+		c.step = 1;
+		c.areas = [];
+	};
+	
+	c.step2 = function () {
+		c.areas = processMapHTML(c.code);
+		c.step = 2;
+	}
+	
+	c.submit = function () {
+		
+		function checkSelectionExists(elem) {
+			return typeof elem.selection !== 'undefined';
+		}
+		
+		if (c.areas.every(checkSelectionExists)) {
+			
+			console.log(c.areas);
+			
+			spUtil.get('pi-image-map-config', {
+				action: 'process',
+				map: c.data.map_id,
+				areas: c.areas
+			}).then(function () {
+				c.step = 'finished';
+			});
+		} else {
+			spUtil.addErrorMessage('Not all selections were made!');
+		}
+		
+	}
+	
+	
+	
+	function processMapHTML (code) {
+		
+		var el = document.createElement('html');
+		el.innerHTML = code;
+		var areaElems = el.getElementsByTagName('area');
+		
+		if (areaElems.length === 0) {
+			return [];
+		}
+		
+		var areas = [];
+			
+		for(i = 0;i < areaElems.length; i++) {
+			areas.push({
+				value: areaElems[i].getAttribute("title"),
+				title: areaElems[i].getAttribute("title"),
+				shape: areaElems[i].getAttribute("shape"),
+				coords: areaElems[i].getAttribute("coords")
+			});
+		}
+		
+		return areas;
+	}
+
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.pi-imc-table {
+  
+  input, select {
+    width: 100%;
+  }
+  
+  input:disabled {
+    border: 0px;
+  }
+  
+}
+
+.pi-imc-actions {
+  margin-top: 10px;
+  
+  button {
+    float: right;
+    margin-left: 10px;
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>pi-image-map-config</id>
+        <internal>false</internal>
+        <link><![CDATA[function imageMapLink(scope, element, attrs) {
+	
+	var $timeout = $injector.get('$timeout');
+	
+	$timeout(function() {
+	
+		var e = element.find('.CodeMirror')[0];
+
+		var cmi = initializeCodeMirror(e)
+
+		function initializeCodeMirror(elem) {
+			var options = {
+				mode: "htmlmixed",
+				lineNumbers: true,
+				lineWrapping: false,
+				readOnly: scope.snDisabled === true,
+				viewportMargin: Infinity,
+				foldGutter: true,
+				gutters: ["CodeMirror-linenumbers", "CodeMirror-lint-markers", "CodeMirror-foldgutter"],
+				indentWithTabs: true,
+				indentUnit: 2,
+				tabSize: 2,
+				matchBrackets: true,
+				autoCloseBrackets: true,
+				theme: "snc"
+			};
+			if (scope.options) {
+				Object.keys(scope.options).forEach(function(key) {
+					options[key] = scope.options[key];
+				});
+			}
+			var cm = CodeMirror.fromTextArea(elem, options);
+			return cm;
+		}
+		
+		cmi.on('change', function(cm) {
+			scope.c.code = cm.getValue();
+		});
+		
+	}, 0);
+}]]></link>
+        <name>(PI) Image Map Config</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	
+	if (input) {
+		data.map_id = input.map;
+	} else {
+		data.map_id = $sp.getParameter('sys_id');
+	}
+	
+	var map = new GlideRecord('x_pisn_imagemap_map');
+	map.get(data.map_id);
+	
+	if (input && input.action === 'process') {
+		
+		var existing = new GlideRecord('x_pisn_imagemap_area')
+		existing.addQuery('map', map.getUniqueValue());
+		existing.deleteMultiple();
+		
+		input.areas.forEach(function (area) {
+			
+			var areaGr = new GlideRecord('x_pisn_imagemap_area');
+			areaGr.initialize();
+			areaGr.map = map.getUniqueValue();
+			areaGr.setValue('shape', area.shape);
+			areaGr.setValue('coordinates', area.coords);
+			
+			if (map.getValue('mode') === 'checkbox') {
+				areaGr.checkbox = area.selection;
+			} else {
+				areaGr.option = area.selection;
+			}
+			
+			areaGr.insert();
+			
+		});
+		
+		return;
+	}
+	
+	var img = map.image.getRefRecord();
+	var vbl = map.macro_variable.getRefRecord();
+	var cat_item = vbl.cat_item.getRefRecord();
+	
+	data.image_url = '/' + img.getValue('name');
+	data.mode = map.getValue('mode');
+	data.cat_item = cat_item.getUniqueValue();
+	
+	if (data.mode === 'checkbox') {
+		
+		var vblsGr = new GlideRecord('item_option_new');
+		vblsGr.addQuery('cat_item', data.cat_item);
+		vblsGr.addQuery('type', 7);
+		vblsGr.query();
+		
+		data.checkboxes = [];
+		
+		while (vblsGr.next()) {
+			data.checkboxes.push({
+				sys_id: vblsGr.getUniqueValue(),
+				label: vblsGr.getValue('question_text'),
+				value: vblsGr.getValue('name')
+			});
+		}
+		
+	} else {
+		
+		var optsGr = new GlideRecord('question_choice');
+		optsGr.addQuery('question', map.getValue('choice_variable'));
+		optsGr.query();
+		
+		data.choices = [];
+		
+		while (optsGr.next()) {
+			data.choices.push({
+				sys_id: optsGr.getUniqueValue(),
+				text: optsGr.getValue('text'),
+				value: optsGr.getValue('value')
+			});
+		}
+		
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-23 02:20:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>395cf98adb3303008cfb70f08c96199c</sys_id>
+        <sys_mod_count>109</sys_mod_count>
+        <sys_name>(PI) Image Map Config</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>sp_widget_395cf98adb3303008cfb70f08c96199c</sys_update_name>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-23 07:37:41</sys_updated_on>
+        <template><![CDATA[<div id="pi-imc" class="panel panel-default b">
+  <div class="panel-heading">
+    <h2 class="panel-title">Image Map Config</h2>
+  </div>
+  <div class="panel-body">
+    
+    <div ng-show="c.step === 1">
+      <h3>Step 1</h3>
+      <ol>
+        <li>Download a copy of the image related to the Map record from <strong><a ng-href="{{data.image_url}}" target="_blank">here</a></strong>.</li>
+        <li>Visit <strong><a href="https://www.image-map.net" target="_blank">image-map.net</a></strong> and upload that image you downloaded.</li>
+        <li>Use the online tool to create your image map, ensuring "Shape" and "Title" completed for all elements.</li>
+        <li>Click the <strong>Show Me The Code</strong> button.</li>
+        <li>Copy the code shown to your clipboard.</li>
+        <li>Paste the code in your clipboard in the area below.</li>
+        <li>Click <strong>Next</strong>.</li>
+      </ol>
+      <div id="pi-imc-code">
+        <textarea class="CodeMirror" name="image-map-code"></textarea>
+      </div>
+      <div class="pi-imc-actions clearfix">
+        <button class="btn btn-primary" ng-click="c.step2()">Next</button>
+      </div>
+    </div>
+    
+    
+    <div ng-show="c.step === 2">
+      <h3>Step 2</h3>
+      
+      <div ng-if="::data.mode === 'checkbox'">
+        <p>Match up the Areas you created with Checkboxes related to the Catalog Item.</p>
+        <table class="pi-imc-table table table-bordered">
+          <thead>
+            <tr>
+              <td>Shape</td>
+              <td>Area Name</td>
+              <td>Checkbox</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="area in c.areas">
+              <td><input type="text" value="{{area.shape}}({{area.coords}})" disabled/></td>
+              <td><input type="text" ng-model="area.title"/></td>
+              <td><select ng-options="checkbox.sys_id as checkbox.label for checkbox in c.data.checkboxes | orderBy:'label'" ng-model="area.selection">
+                <option value="" disabled>Select a checkbox</option>
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div ng-if="::data.mode === 'choice'">
+        <p>Match up the Areas you created with the choices available on the Choice field associated with this map.</p>
+        <table class="pi-imc-table table table-bordered">
+          <thead>
+            <tr>
+              <td>Shape</td>
+              <td>Area Name</td>
+              <td>Choice</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="area in c.areas">
+              <td><input type="text" value="{{area.shape}}({{area.coords}})" disabled/></td>
+              <td><input type="text" ng-model="area.title"/></td>
+              <td><select ng-options="choice.sys_id as choice.text for choice in c.data.choices | orderBy:'text'" ng-model="area.selection">
+                <option value="" disabled>Select a choice</option>
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+      
+			<div class="pi-imc-actions clearfix">
+        <button class="btn btn-primary" ng-click="c.submit()">Submit</button>
+        <button class="btn btn-default" ng-click="c.back()">Back</button>
+      </div>
+    </div>
+    
+    <div ng-show="c.step === 'finished'">
+      <h3>Finished</h3>
+      <p>You can test out your record producer by following the links below:</p>
+      <p><a ng-href="/sp?id=sc_cat_item&sys_id={{c.data.cat_item}}">Service Portal</a></p>
+      <p><a ng-href="/nav_to.do?uri=/com.glideapp.servicecatalog_cat_item_view.do?sysparm_id={{c.data.cat_item}}">UI16</a></p>
+    </div>
+    
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_pisn_imagemap.Area</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Area</name>
+        <script><![CDATA[var Area = Class.create();
+Area.prototype = {
+    initialize: function(area) {
+		
+		var record;
+		
+		if (typeof area === 'string') {
+			
+			var gr = new GlideRecord('x_pisn_imagemap_map');
+			
+			if (!gr.get(area)) {
+				return false;
+			}
+			
+			record = gr;
+			
+		} else if (typeof area === 'object') {
+			
+			record = area;
+			
+		} else {
+			
+			return false;
+			
+		}
+		
+		Object.defineProperty(this, '_gr', { value: record, enumerable: false });
+    },
+	
+	toJSON: function () {
+		
+		var val;
+		
+		if (!this._gr.checkbox.nil()) {
+			var cb = this._gr.checkbox.getRefRecord();
+			val = cb.getValue('name');
+		} else {
+			var ch = this._gr.option.getRefRecord();
+			val = ch.getValue('value');
+		}
+		
+		return {
+			coordinates: this._gr.getValue('coordinates'),
+			shape: this._gr.getValue('shape'),
+			value: val
+		};
+		
+	},
+
+    type: 'Area'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-01-24 04:56:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>66b9abdadbfb03008cfb70f08c961978</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Area</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>sys_script_include_66b9abdadbfb03008cfb70f08c961978</sys_update_name>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-01-25 03:27:50</sys_updated_on>
+    </sys_script_include>
+</record_update>

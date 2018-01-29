@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="mode" table="x_pisn_imagemap_map" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>mode</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Choice</label>
+            <language>en</language>
+            <name>x_pisn_imagemap_map</name>
+            <sequence>1</sequence>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2018-01-23 04:24:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1bc8decadb7303008cfb70f08c961990</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2018-01-23 04:24:57</sys_updated_on>
+            <value>choice</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>mode</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Checkbox</label>
+            <language>en</language>
+            <name>x_pisn_imagemap_map</name>
+            <sequence>2</sequence>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2018-01-23 04:24:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cac89ecadb7303008cfb70f08c961947</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2018-01-23 04:24:59</sys_updated_on>
+            <value>checkbox</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>mode</element>
+            <name>x_pisn_imagemap_map</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2018-01-23 04:24:45</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>8df451984fc0130022f40ccf0310c7f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>mode</sys_name>
+            <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+            <sys_update_name>sys_choice_x_pisn_imagemap_map_mode</sys_update_name>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2018-01-23 04:24:45</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

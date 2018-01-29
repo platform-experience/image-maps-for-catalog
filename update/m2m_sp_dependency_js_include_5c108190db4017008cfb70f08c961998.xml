@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="m2m_sp_dependency_js_include">
+    <m2m_sp_dependency_js_include action="INSERT_OR_UPDATE">
+        <order>300</order>
+        <sp_dependency display_value="Fabricjs">864ef50edb3303008cfb70f08c9619f6</sp_dependency>
+        <sp_js_include display_value="Canvas">e9fff090db4017008cfb70f08c961959</sp_js_include>
+        <sys_class_name>m2m_sp_dependency_js_include</sys_class_name>
+        <sys_created_by>dylan.lindgren@snc</sys_created_by>
+        <sys_created_on>2018-01-29 21:43:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5c108190db4017008cfb70f08c961998</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Fabricjs.Canvas</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_update_name>m2m_sp_dependency_js_include_5c108190db4017008cfb70f08c961998</sys_update_name>
+        <sys_updated_by>dylan.lindgren@snc</sys_updated_by>
+        <sys_updated_on>2018-01-29 21:43:29</sys_updated_on>
+    </m2m_sp_dependency_js_include>
+</record_update>
