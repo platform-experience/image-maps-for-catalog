@@ -18,6 +18,7 @@
 		g_form = $scope.page.g_form;
 		elem = $element.find('#pi-im-map-' + c.data.vbl_id);
 		cvs = new Canvas(elem, c.data, g_form);
+		$scope.hideEmptyOptions();
 	}
 	
 }]]></client_script>
@@ -69,7 +70,11 @@
 	}, 0);
 	
 	scope.hideEmptyOptions = function () {
-		var fieldsets = $document.find('fieldset');
+		var fieldsets = $document.find('fieldset:has( > legend:contains("Options"))');
+		
+		if (fieldsets.find('div > div > div > div:not(.ng-hide)').length === 0) {
+			fieldsets.hide();
+		}
 	}
 	
 }]]></link>
@@ -107,15 +112,15 @@
         <sys_created_on>2018-01-23 02:19:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>863c7d4adb3303008cfb70f08c961924</sys_id>
-        <sys_mod_count>204</sys_mod_count>
+        <sys_mod_count>211</sys_mod_count>
         <sys_name>(PI) Image Map for Catalog Items</sys_name>
         <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
         <sys_update_name>sp_widget_863c7d4adb3303008cfb70f08c961924</sys_update_name>
-        <sys_updated_by>dylan.lindgren@snc</sys_updated_by>
-        <sys_updated_on>2018-01-29 21:54:13</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-01-30 00:09:55</sys_updated_on>
         <template><![CDATA[<div class="pi-im">
   <div class="pi-im-note">
   	<span ng-if="c.data.mode === 'choice'">Please select <strong>one</strong> area on the below image.</span>
@@ -124,7 +129,6 @@
   <div class="pi-im-canvas">
     <canvas id="pi-im-map-{{::c.data.vbl_id}}"></canvas>
   </div>
-  
 </div>]]></template>
     </sp_widget>
 </record_update>
