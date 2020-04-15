@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="update_synch=true" extends="sys_metadata" label="Map" max_length="40" name="x_pisn_imagemap_map" type="collection">
         <element default="rgba(100,200,200,0.5)" label="Area border color" max_length="40" name="area_border_color" type="string"/>
         <element default="rgba(100,200,200,0.5)" label="Area border color (hover)" max_length="40" name="area_border_color_hover" type="string"/>
@@ -10,8 +9,8 @@
         <element display="true" label="Macro variable" mandatory="true" max_length="32" name="macro_variable" reference="item_option_new" reference_qual="type=14^ORtype=17^EQ" reference_qual_condition="type=14^ORtype=17^EQ" type="reference"/>
         <element choice="3" default="choice" label="Mode" max_length="40" name="mode" type="choice">
             <choice>
-                <element label="Choice" sequence="1" value="choice"/>
-                <element label="Checkbox" sequence="2" value="checkbox"/>
+                <element inactive_on_update="false" label="Choice" sequence="1" value="choice"/>
+                <element inactive_on_update="false" label="Checkbox" sequence="2" value="checkbox"/>
             </choice>
         </element>
         <index name="index">

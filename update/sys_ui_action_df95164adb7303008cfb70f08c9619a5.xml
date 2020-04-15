@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sys_ui_action">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name>pi_set_up_map</action_name>
         <active>true</active>
         <client>true</client>
+        <client_script_v2/>
         <comments/>
         <condition>!current.isNewRecord()</condition>
         <form_action>true</form_action>
         <form_button>false</form_button>
+        <form_button_v2>false</form_button_v2>
         <form_context_menu>false</form_context_menu>
         <form_link>true</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
         <form_style/>
         <hint/>
+        <isolate_script>false</isolate_script>
         <list_action>false</list_action>
         <list_banner_button>false</list_banner_button>
         <list_button>false</list_button>
@@ -33,7 +36,6 @@
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>dylan.lindgren</sys_created_by>
         <sys_created_on>2018-01-23 04:12:29</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>df95164adb7303008cfb70f08c9619a5</sys_id>
@@ -42,7 +44,6 @@
         <sys_overrides/>
         <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
         <sys_update_name>sys_ui_action_df95164adb7303008cfb70f08c9619a5</sys_update_name>
         <sys_updated_by>dylan.lindgren</sys_updated_by>

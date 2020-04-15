@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_list parent="" relationship="" sys_domain="global" table="x_pisn_imagemap_map" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -59,7 +58,6 @@
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>dylan.lindgren</sys_created_by>
             <sys_created_on>2018-01-23 06:54:20</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>e60bbe4edbb303008cfb70f08c961976</sys_id>
@@ -67,7 +65,6 @@
             <sys_name>x_pisn_imagemap_map</sys_name>
             <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
             <sys_update_name>sys_ui_list_x_pisn_imagemap_map_null</sys_update_name>
             <sys_updated_by>dylan.lindgren</sys_updated_by>

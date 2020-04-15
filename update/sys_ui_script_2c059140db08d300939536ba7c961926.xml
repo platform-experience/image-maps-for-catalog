@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_ui_script">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
     <sys_ui_script action="INSERT_OR_UPDATE">
         <active>true</active>
         <description/>
@@ -60,17 +59,16 @@ x_pisn_imagemap.ImageMapUI16 = (function() {
         <sys_class_name>sys_ui_script</sys_class_name>
         <sys_created_by>dylan.lindgren</sys_created_by>
         <sys_created_on>2018-01-29 04:36:43</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>2c059140db08d300939536ba7c961926</sys_id>
         <sys_mod_count>13</sys_mod_count>
         <sys_name>x_pisn_imagemap.ImageMapUI16</sys_name>
         <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
         <sys_update_name>sys_ui_script_2c059140db08d300939536ba7c961926</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2018-01-30 00:16:24</sys_updated_on>
+        <ui_type/>
         <use_scoped_format>false</use_scoped_format>
     </sys_ui_script>
 </record_update>

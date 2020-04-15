@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_security_acl">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
     <sys_security_acl action="INSERT_OR_UPDATE">
         <active>true</active>
         <admin_overrides>true</admin_overrides>
@@ -12,13 +11,11 @@
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>dylan.lindgren</sys_created_by>
         <sys_created_on>2018-01-23 04:23:39</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>9788dacadb7303008cfb70f08c96192d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_pisn_imagemap_map</sys_name>
         <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
         <sys_update_name>sys_security_acl_9788dacadb7303008cfb70f08c96192d</sys_update_name>
         <sys_updated_by>dylan.lindgren</sys_updated_by>

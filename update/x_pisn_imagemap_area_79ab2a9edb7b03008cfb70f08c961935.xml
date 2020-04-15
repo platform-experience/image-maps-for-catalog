@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="x_pisn_imagemap_area">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_pisn_imagemap_area">
     <x_pisn_imagemap_area action="INSERT_OR_UPDATE">
         <checkbox/>
         <coordinates>99,216,90,222,81,243,75,279,77,298,83,309,83,335,88,381,69,436,67,457,62,469,64,481,51,542,85,558,106,506,130,442,132,395,123,341,122,297</coordinates>
@@ -10,13 +9,11 @@
         <sys_class_name>x_pisn_imagemap_area</sys_class_name>
         <sys_created_by>dylan.lindgren</sys_created_by>
         <sys_created_on>2018-01-24 00:25:35</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>79ab2a9edb7b03008cfb70f08c961935</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>poly</sys_name>
         <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
         <sys_update_name>x_pisn_imagemap_area_79ab2a9edb7b03008cfb70f08c961935</sys_update_name>
         <sys_updated_by>dylan.lindgren</sys_updated_by>
