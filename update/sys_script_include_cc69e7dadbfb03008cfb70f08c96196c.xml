@@ -22,16 +22,11 @@ ImageMapHelper.prototype = {
 		return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 	},
 
-	getMapForMacroVar: function (sys_id, name) {
+	getMapForMacroVar: function (sys_id) {
 
 		var gr = new GlideRecord('x_pisn_imagemap_map');
-
-		if (sys_id) {
-			gr.addQuery('macro_variable', sys_id);
-		} else {
-			gr.addQuery('macro_variable.name', name);
-		}
-
+		gr.addQuery('macro_variable', sys_id)
+			.addOrCondition('macro_variable.name', sys_id);
 		gr.setLimit(1);
 		gr.query();
 
@@ -52,13 +47,13 @@ ImageMapHelper.prototype = {
         <sys_created_by>dylan.lindgren</sys_created_by>
         <sys_created_on>2018-01-24 22:14:02</sys_created_on>
         <sys_id>cc69e7dadbfb03008cfb70f08c96196c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>ImageMapHelper</sys_name>
         <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
         <sys_update_name>sys_script_include_cc69e7dadbfb03008cfb70f08c96196c</sys_update_name>
         <sys_updated_by>dylan.lindgren</sys_updated_by>
-        <sys_updated_on>2020-04-15 06:03:11</sys_updated_on>
+        <sys_updated_on>2020-04-16 02:54:00</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="update_synch=true" extends="sys_metadata" label="Area" max_length="40" name="x_pisn_imagemap_area" type="collection">
+    <element attributes="update_synch=true" extends="sys_metadata" label="Area" max_length="40" name="x_pisn_imagemap_area" sizeclass="22" type="collection">
         <element label="Checkbox" max_length="32" name="checkbox" reference="item_option_new" type="reference"/>
         <element label="Coordinates" max_length="1024" name="coordinates" type="string"/>
         <element label="Map" max_length="32" name="map" reference="x_pisn_imagemap_map" type="reference"/>
