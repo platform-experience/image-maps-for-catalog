@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_security_acl_role">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
     <sys_security_acl_role action="INSERT_OR_UPDATE">
         <sys_class_name>sys_security_acl_role</sys_class_name>
         <sys_created_by>dylan.lindgren</sys_created_by>
         <sys_created_on>2018-01-23 04:26:16</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>2929920edb7303008cfb70f08c9619a1</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_pisn_imagemap_area.x_pisn_imagemap.user</sys_name>
         <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
         <sys_security_acl display_value="x_pisn_imagemap_area">ed29920edb7303008cfb70f08c96199e</sys_security_acl>
         <sys_update_name>sys_security_acl_role_2929920edb7303008cfb70f08c9619a1</sys_update_name>

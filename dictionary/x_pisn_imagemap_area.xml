@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
-    <element attributes="update_synch=true" extends="sys_metadata" label="Area" max_length="40" name="x_pisn_imagemap_area" type="collection">
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Area" max_length="40" name="x_pisn_imagemap_area" sizeclass="22" type="collection">
         <element label="Checkbox" max_length="32" name="checkbox" reference="item_option_new" type="reference"/>
         <element label="Coordinates" max_length="1024" name="coordinates" type="string"/>
         <element label="Map" max_length="32" name="map" reference="x_pisn_imagemap_map" type="reference"/>
         <element calculation="(function calculatedFieldValue(current) {&#10;&#9;&#10;&#9;var map = current.map.getRefRecord();&#10;&#10;&#9;return map.getValue('mode');&#10;&#10;})(current);" choice="3" choice_field="mode" choice_table="x_pisn_imagemap_map" default="choice" label="Mode" max_length="40" name="mode" read_only="true" type="choice" virtual="true">
             <choice>
-                <element label="Choice" sequence="0" value="choice"/>
-                <element label="Checkbox" sequence="1" value="checkbox"/>
+                <element inactive_on_update="false" label="Choice" sequence="0" value="choice"/>
+                <element inactive_on_update="false" label="Checkbox" sequence="1" value="checkbox"/>
             </choice>
         </element>
         <element label="Option" max_length="32" name="option" reference="question_choice" type="reference"/>
         <element choice="3" default="poly" display="true" label="Shape" mandatory="true" max_length="40" name="shape" type="choice">
             <choice>
-                <element label="Polygon" sequence="1" value="poly"/>
-                <element label="Rectangle" sequence="2" value="rect"/>
-                <element label="Circle" sequence="3" value="circle"/>
+                <element inactive_on_update="false" label="Polygon" sequence="1" value="poly"/>
+                <element inactive_on_update="false" label="Rectangle" sequence="2" value="rect"/>
+                <element inactive_on_update="false" label="Circle" sequence="3" value="circle"/>
             </choice>
         </element>
         <index name="index">

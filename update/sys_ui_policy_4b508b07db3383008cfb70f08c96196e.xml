@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sys_ui_policy">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_pisn_imagemap_area">mode=choice^EQ<item endquery="false" field="mode" goto="false" newquery="false" operator="=" or="false" value="choice"/>
+        <conditions table="x_pisn_imagemap_area">mode=choice^EQ<item display_value="Choice" endquery="false" field="mode" goto="false" newquery="false" operator="=" or="false" value="choice"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <description/>
         <global>true</global>
         <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
         <model_id/>
         <model_table/>
         <on_load>true</on_load>
@@ -25,7 +25,6 @@
         <sys_class_name>sys_ui_policy</sys_class_name>
         <sys_created_by>dylan.lindgren</sys_created_by>
         <sys_created_on>2018-01-26 09:51:53</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4b508b07db3383008cfb70f08c96196e</sys_id>
@@ -34,7 +33,6 @@
         <sys_overrides/>
         <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
         <sys_update_name>sys_ui_policy_4b508b07db3383008cfb70f08c96196e</sys_update_name>
         <sys_updated_by>dylan.lindgren</sys_updated_by>

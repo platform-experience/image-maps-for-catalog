@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="item_option_new">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
@@ -59,13 +58,11 @@
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>dylan.lindgren</sys_created_by>
         <sys_created_on>2018-01-24 03:57:09</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>6a0c5b16dbfb03008cfb70f08c9619a4</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>formatter2</sys_name>
         <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
         <sys_update_name>item_option_new_6a0c5b16dbfb03008cfb70f08c9619a4</sys_update_name>
         <sys_updated_by>dylan.lindgren</sys_updated_by>
@@ -76,6 +73,7 @@
         <ui_page/>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
+        <validate_regex/>
         <variable_name/>
         <variable_set/>
         <variable_width/>

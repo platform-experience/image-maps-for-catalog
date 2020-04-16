@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="DELETE" field="mode" table="x_pisn_imagemap_map" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>mode</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Choice</label>
+            <language>en</language>
+            <name>x_pisn_imagemap_map</name>
+            <sequence>1</sequence>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2020-04-15 04:41:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0e3195b31b4810108a8a631d274bcbe7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2020-04-15 04:41:40</sys_updated_on>
+            <value>choice</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>mode</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Checkbox</label>
+            <language>en</language>
+            <name>x_pisn_imagemap_map</name>
+            <sequence>2</sequence>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2020-04-15 04:41:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4e3195b31b4810108a8a631d274bcbe7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2020-04-15 04:41:40</sys_updated_on>
+            <value>checkbox</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>mode</element>
+            <name>x_pisn_imagemap_map</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>dylan.lindgren</sys_created_by>
+            <sys_created_on>2020-04-15 04:41:40</sys_created_on>
+            <sys_id>423195b31b4810108a8a631d274bcbe8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>mode</sys_name>
+            <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+            <sys_update_name>sys_choice_x_pisn_imagemap_map_mode</sys_update_name>
+            <sys_updated_by>dylan.lindgren</sys_updated_by>
+            <sys_updated_on>2020-04-15 04:41:40</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</application>
+        <file_path/>
+        <instance_id>93755833db40d414c6e711f84896193c</instance_id>
+        <instance_name>dl2</instance_name>
+        <name>sys_choice_x_pisn_imagemap_map_mode</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_choice action="INSERT_OR_UPDATE" field="mode" table="x_pisn_imagemap_map" version="3"><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>mode</element><hint/><inactive>false</inactive><label>Choice</label><language>en</language><name>x_pisn_imagemap_map</name><sequence>1</sequence><sys_created_by>dylan.lindgren</sys_created_by><sys_created_on>2020-04-15 04:41:40</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0e3195b31b4810108a8a631d274bcbe7</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>dylan.lindgren</sys_updated_by><sys_updated_on>2020-04-15 04:41:40</sys_updated_on><value>choice</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>mode</element><hint/><inactive>false</inactive><label>Checkbox</label><language>en</language><name>x_pisn_imagemap_map</name><sequence>2</sequence><sys_created_by>dylan.lindgren</sys_created_by><sys_created_on>2020-04-15 04:41:40</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>4e3195b31b4810108a8a631d274bcbe7</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>dylan.lindgren</sys_updated_by><sys_updated_on>2020-04-15 04:41:40</sys_updated_on><value>checkbox</value></sys_choice><sys_choice_set action="INSERT_OR_UPDATE"><element>mode</element><name>x_pisn_imagemap_map</name><sys_class_name>sys_choice_set</sys_class_name><sys_created_by>dylan.lindgren</sys_created_by><sys_created_on>2020-04-15 04:41:40</sys_created_on><sys_id>423195b31b4810108a8a631d274bcbe8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>mode</sys_name><sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package><sys_policy/><sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope><sys_update_name>sys_choice_x_pisn_imagemap_map_mode</sys_update_name><sys_updated_by>dylan.lindgren</sys_updated_by><sys_updated_on>2020-04-15 04:41:40</sys_updated_on></sys_choice_set></sys_choice></record_update>]]></payload>
+        <payload_hash>-2595908</payload_hash>
+        <record_name>Map.Mode</record_name>
+        <reverted_from/>
+        <source>b875a0331b0010108a8a631d274bcbbc</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2020-04-15 01:30:26</sys_created_on>
+        <sys_id>df3119b31b4810108a8a631d274bcbeb</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>1717b756f500000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Choice list</type>
+        <update_guid>9f3119b3bc48101079f45f1feda31deb</update_guid>
+        <update_guid_history>9f3119b3bc48101079f45f1feda31deb:-2595908</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2020-04-15 04:41:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_choice_set">sys_choice_set</sys_db_object>
+        <sys_id>423195b31b4810108a8a631d274bcbe8</sys_id>
+        <sys_metadata>423195b31b4810108a8a631d274bcbe8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>mode</sys_name>
+        <sys_package display_value="Image Map for Catalog Items" source="x_pisn_imagemap">fe4bf50adb3303008cfb70f08c9619df</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Image Map for Catalog Items">fe4bf50adb3303008cfb70f08c9619df</sys_scope>
+        <sys_scope_delete display_value="">746ed2ef4b6a437eaa5288a393e68e64</sys_scope_delete>
+        <sys_update_name>sys_choice_x_pisn_imagemap_map_mode</sys_update_name>
+        <sys_update_version display_value="sys_choice_x_pisn_imagemap_map_mode">df3119b31b4810108a8a631d274bcbeb</sys_update_version>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2020-04-15 04:41:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
